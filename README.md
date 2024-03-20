@@ -23,8 +23,6 @@ Requirements (`python3.x`):
 ## CBOW (Continuous Bag of Words)
 The goal of `CBOW` is to predict the target word based on the context around this word. The context is defined as a set of words around the target word within a given window. The model architecture is simplified as a three-layer neural network: an input layer, a hidden layer, and an output layer.
 
-![CBOW](https://www.researchgate.net/profile/Raouf-Ganda/publication/318975052/figure/fig2/AS:631670868820002@1527613479312/CBOW-architecture-predicts-the-current-word-based-on-the-context.png)
-
 __Input layer:__ The model receives context words. These words are represented as vectors using "one-hot encoding", where each vector has a dimension equal to the size of the vocabulary and contains 1 at the position corresponding to the word's index in the vocabulary, and 0 in all other positions.
 
 __Hidden layer:__ The input word vectors are multiplied by a weight matrix between the input and hidden layer, resulting in a hidden layer vector. For CBOW, the context word vectors are usually averaged before being passed to the next layer.
@@ -33,8 +31,6 @@ __Output layer:__ The hidden layer vector is multiplied by a weight matrix betwe
 
 ### Skip-Gram
 Unlike CBOW, the goal of Skip-Gram is to predict the context words for a given target word. This word at the model's input is used to predict words in its context within a given range of words (called the window).
-
-![Skip-Gram](https://www.researchgate.net/profile/Firas-Odeh/publication/327537608/figure/fig5/AS:668724143063056@1536447668875/word2vec-Skip-gram-model-Image-credit-User-Moucrowap-on-Wikipedia.ppm)
 
 __Input layer:__ The input is the target word, represented as a `one-hot` vector.
 Hidden layer: The same as in CBOW, where the target word vector is multiplied by a weight matrix leading to the hidden layer.
